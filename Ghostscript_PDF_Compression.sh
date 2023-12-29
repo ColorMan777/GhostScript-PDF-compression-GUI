@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if chemin=$(zenity --file-selection --file-filter="*.pdf" --title="PDF à compresser")
+if chemin=$(zenity --file-selection --file-filter="*.pdf" --title="Choose a PDF file to compress")
 
     then 
-        if mode=$(zenity --entry --title="Mode de compression" --text="Veuillez choisir un mode de compression" --entry-text="Default" "Screen (72dpi)" "Ebook (150dpi)" "Prepress (300dpi)" "Printer (300dpi)" )
+        if mode=$(zenity --entry --title="Compression Mode" --text="Please choose a compression mode" --entry-text="Default" "Screen (72dpi)" "Ebook (150dpi)" "Prepress (300dpi)" "Printer (300dpi)" )
         then
             
         
