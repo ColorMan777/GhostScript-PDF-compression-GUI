@@ -1,6 +1,6 @@
 # GhostScript-PDF-compression-GUI
 
-<b>A GUI to compress PDF with Ghostscript</b>
+<b>A GUI to compress PDF with Ghostscript on Linux</b>
 
 For it to work well you need <b>ghostscript</b> and <b>zenity</b> installed.
 If needed you can install them like that :
