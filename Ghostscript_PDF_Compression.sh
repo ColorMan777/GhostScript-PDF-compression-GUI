@@ -17,28 +17,28 @@ if chemin=$(zenity --file-selection --file-filter="*.pdf" --title="Choose a PDF 
         
         if [ "$mode" = "Default" ] #condiion to set the compression mode
         then
-            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$new_path $chemin | zenity --progress --pulsate --auto-close
+            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$new_path" "$chemin" | zenity --progress --pulsate --auto-close
 
         fi
         
         if [ "$mode" = "Screen (72dpi)" ]
         then
-            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$new_path $chemin | zenity --progress --pulsate --auto-close
+            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$new_path" "$chemin" | zenity --progress --pulsate --auto-close
         fi
         
         if [ "$mode" = "Ebook (150dpi)" ]
         then
-            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$new_path $chemin | zenity --progress --pulsate --auto-close
+            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$new_path" "$chemin" | zenity --progress --pulsate --auto-close
         fi
         
         if [ "$mode" = "Prepress (300dpi)" ]
         then
-            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$new_path $chemin | zenity --progress --pulsate --auto-close
+            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$new_path" "$chemin" | zenity --progress --pulsate --auto-close
         fi
         
         if [ "$mode" = "Printer (300dpi)" ]
         then
-            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$new_path $chemin | zenity --progress --pulsate --auto-close
+            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$new_path" "$chemin" | zenity --progress --pulsate --auto-close
         fi
         
 
